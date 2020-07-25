@@ -34,7 +34,7 @@ class CommonContactServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->register(SeedServiceProvider::class);
+//        $this->app->register(SeedServiceProvider::class);
         $this->registerEloquentFactoriesFrom(__DIR__ . '/database/factories');
         /*
          * Optional methods to load your package assets
