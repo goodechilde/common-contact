@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ContactType extends Model
 {
-    // use SoftDeletes;
+     use SoftDeletes;
 
     protected $guarded = [ 'id' ];
     //

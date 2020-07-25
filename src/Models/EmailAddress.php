@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class EmailAddress extends Model
 {
-    // use SoftDeletes;
+     use SoftDeletes;
 
     protected $guarded = [ 'id' ];
+    protected $with = ['contactType'];
 
     public function contactType()
     {

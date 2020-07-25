@@ -10,6 +10,7 @@ class Address extends Model
      use SoftDeletes;
 
     protected $guarded = [ 'id' ];
+    protected $with = ['contactType'];
 
     public function contactType()
     {
