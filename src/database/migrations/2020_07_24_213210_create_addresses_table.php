@@ -27,6 +27,7 @@ class CreateAddressesTable extends Migration
             $table->string('municipality')->comment('municipality, county')->nullable();
             $table->decimal('latitude', 8, 6, false)->nullable();
             $table->decimal('longitude', 9, 6, false)->nullable();
+            $table->boolean('primary')->default(false);
             $table->morphs('addressable');
             $table->timestampsTz();
             $table->softDeletesTz();
