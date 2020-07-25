@@ -9,6 +9,20 @@ Changes between versions will be tracked in the [CHANGELOG](CHANGELOG.md).
 ```bash
 composer require goodechilde/common-contact
 ```
+```bash
+php artisan vendor:publish --tag=goodechilde 
+```
+
+## Usage
+It's as simple as adding the following traits to any model you want to have any of the contact types
+```bash
+    use HasSocialMediaAddresses;
+    use HasEmailAddresses;
+    use HasPhones;
+    use HasAddresses;
+```
+
+It is recommended to create a controller for to get and set ContactTypes
 
 ## Feedback
 
