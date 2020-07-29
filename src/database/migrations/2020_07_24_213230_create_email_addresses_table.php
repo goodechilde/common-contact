@@ -19,6 +19,8 @@ class CreateEmailAddressesTable extends Migration
             $table->string('email_address');
             $table->boolean('primary')->default(false);
             $table->morphs('emailaddressable');
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestampsTz();
             $table->softDeletesTz();
         });

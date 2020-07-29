@@ -20,6 +20,8 @@ class CreatePhonesTable extends Migration
             $table->boolean('primary')->default(false);
             $table->string('locale')->default('US');
             $table->morphs('phoneable');
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestampsTz();
             $table->softDeletesTz();
         });

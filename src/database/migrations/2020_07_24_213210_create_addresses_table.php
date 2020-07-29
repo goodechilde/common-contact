@@ -29,6 +29,8 @@ class CreateAddressesTable extends Migration
             $table->decimal('longitude', 9, 6, false)->nullable();
             $table->boolean('primary')->default(false);
             $table->morphs('addressable');
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestampsTz();
             $table->softDeletesTz();
         });

@@ -19,6 +19,8 @@ class CreateSocialMediaAddressesTable extends Migration
             $table->string('handle');
             $table->boolean('primary')->default(false);
             $table->morphs('socialmediaaddressable');
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->unsignedBigInteger('updated_by')->nullable();
             $table->timestampsTz();
             $table->softDeletesTz();
         });
