@@ -18,6 +18,7 @@ class CreatePhonesTable extends Migration
             $table->foreignId('contact_type');
             $table->bigInteger('phone_number')->comment('E.164 Standard phone');
             $table->boolean('primary')->default(false);
+            $table->string('locale')->default('US');
             $table->morphs('phoneable');
             $table->timestampsTz();
             $table->softDeletesTz();
