@@ -4,7 +4,7 @@ namespace Goodechilde\CommonContact\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use League\ISO3166\ISO3166;
+use League\ISO3166\ISO3166DataProvider;
 use Propaganistas\LaravelPhone\PhoneNumber;
 use Wildside\Userstamps\Userstamps;
 
@@ -28,6 +28,6 @@ class Address extends Model
 
     public function getCountryDetailAttribute()
     {
-        return (new League\ISO3166\ISO3166)->alpha3($this->country);
+        return (new \League\ISO3166\ISO3166())->alpha3($this->country);
     }
 }
