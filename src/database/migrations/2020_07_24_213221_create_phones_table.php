@@ -22,6 +22,7 @@ class CreatePhonesTable extends Migration
             $table->morphs('phoneable');
             $table->unsignedBigInteger('created_by')->nullable();
             $table->unsignedBigInteger('updated_by')->nullable();
+            $table->unsignedBigInteger('deleted_by')->nullable();
             $table->timestampsTz();
             $table->softDeletesTz();
         });
